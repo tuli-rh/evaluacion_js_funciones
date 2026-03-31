@@ -47,7 +47,8 @@
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 1</h5>
                 <p class="card-text">Módulo de Tesorería: Pago de Permisos (Cálculos y Retorno)</p>
-                <input type="text" class="form-control mb-3" id="input1" placeholder="Ingrese el monto de su permiso de circulación">
+                <input type="text" class="form-control mb-3" id="input1"
+                    placeholder="Ingrese el monto de su permiso de circulación">
                 <a href="#" class="btn btn-primary" onclick="pagoPermisos()">Ejecutar</a>
                 <div id="resultado-container1" class="mt-4 d-none">
                     <h6>Resultado: </h6>
@@ -62,8 +63,8 @@
                 <h5 class="card-title">Ejercicio 2</h5>
                 <p class="card-text">Fila de Urgencias Médicas (unshift e if)</p>
                 <input type="text" class="form-control mb-3" id="input2" placeholder="Ingresar un nombre">
-                <a href="#" class="btn btn-primary" id="normal" onclick="filaEspera()">Normal</a>
-                <a href="#" class="btn btn-primary" id="urgencia" onclick="filaEspera()">Urgencia</a>
+                <a class="btn btn-primary" onclick="agregarPaciente('normal')">Normal</a>
+                <a class="btn btn-primary" onclick="agregarPaciente('urgencia')">Urgencia</a>
                 <div id="resultado-container2" class="mt-4 d-none">
                     <h6>Resultado: </h6>
                     <div id="result2" class="alert alert-success fw-bold"></div>
@@ -72,20 +73,19 @@
         </div>
 
 
-        <!-- Ejercicio 3 -->
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 3</h5>
-                <p class="card-text">Sistema de Delivery (shift, pop e if)</p>
-                <input type="text" class="form-control mb-3" id="input3" placeholder="Confirmar o cancelar pedido">
-                <a href="#" class="btn btn-primary" onclick="gestionarPedidos()">Ejecutar</a>
+                <p class="card-text">Buscador de Beneficiarios</p>
+                <input type="text" class="form-control mb-3" id="input3" placeholder="Ingrese su nombre">
+                <a href="#" class="btn btn-primary" onclick="entregaBeneficios()">Ejecutar</a>
                 <div id="resultado-container3" class="mt-4 d-none">
                     <h6>Resultado: </h6>
                     <div id="result3" class="alert alert-success fw-bold"></div>
                 </div>
             </div>
         </div>
-   
+
     </main>
 
 

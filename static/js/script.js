@@ -25,7 +25,6 @@ function pagoPermisos() {
     result1.textContent = resultado;
     input.value = "";
     container.classList.remove("d-none");
-
 }
 
 /* 2. Módulo de Salud: Fila de Vacunación (Arreglos y Prioridad)
@@ -34,27 +33,30 @@ Lógica: * Botón Normal: Agrega el nombre al final de la lista (push).
 Botón Urgencia: Agrega el nombre al inicio de la lista (unshift).
 Regla: El resultado debe mostrarse como una lista ordenada en el HTML. <ol>
 */
-function agregarNombre(nombre) {
-    if (onclick.getElementById("normal")) {
-        nombres.push(nombre)
-        return `${nombres.join(", ")}n/El siguiente en la fila es:`
-    } else {
-        
-    }
-}
 
-function filaEspera() {
+let nombres = [];
+
+function agregarPaciente(tipo) {
     const container = document.getElementById("resultado-container2");
-    const result2 = document.getElementById("result2");
+    const result = document.getElementById("result2");
     const input = document.getElementById("input2");
+
     let nombre = input.value;
-    let resultado = agregarNombre(nombre);
 
-    let nombres = [];
-   
-   
+    if (tipo === "normal") {
+        nombres.push(nombre);
+    } else if (tipo === "urgencia") {
+        nombres.unshift(nombre);
+    }
 
-    result2.textContent = resultado;
+    let listaHTML = "<ol>";
+    for (let i = 0; i < nombres.length; i++) {
+        listaHTML += `<li>${nombres[i]}</li>`;
+    }
+    listaHTML += "</ol>";
+
+    result.innerHTML = listaHTML;
+
     input.value = "";
     container.classList.remove("d-none");
 }
@@ -67,12 +69,24 @@ si el dato ingresado existe en la lista.
 Regla: La función debe devolver "Beneficiario Verificado" o "No registrado".
 */
 
-function entregaBeneficios(){
-    const container = document.getElementById("resultado-container1");
-    const result1 = document.getElementById("result1");
-    const input = document.getElementById("input1");
-    let monto = parseFloat(input.value);
-    let resultado = montoPermiso(monto);
-    
+let beneficiarios = ["Ana", "Luis", "Pedro", "Sofia", "Maria", "Juan"];
+function buscarNombre(nombre) {
+    for (let i = 0; i < beneficiarios.length; i++) {
+        if (beneficiarios[i] === nombre) {
+            return "Beneficiario Verificado";
+        }
+    }
+    return "No registrado";
+}
 
+function entregaBeneficios() {
+    const container = document.getElementById("resultado-container3");
+    const result3 = document.getElementById("result3");
+    const input = document.getElementById("input3");
+    let nombre = input.value;
+    let resultado = buscarNombre(nombre);
+
+    result3.textContent = resultado;
+    input.value = "";
+    container.classList.remove("d-none");
 }
