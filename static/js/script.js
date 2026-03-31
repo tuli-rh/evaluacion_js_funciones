@@ -34,29 +34,33 @@ Botón Urgencia: Agrega el nombre al inicio de la lista (unshift).
 Regla: El resultado debe mostrarse como una lista ordenada en el HTML. <ol>
 */
 
-let nombres = [];
-
-function agregarPaciente(tipo) {
+function filaUrgencia(nombre) {
+    
+}
+function filaEsperaUrgencia() {
     const container = document.getElementById("resultado-container2");
-    const result = document.getElementById("result2");
+    const result2 = document.getElementById("result2");
     const input = document.getElementById("input2");
-
     let nombre = input.value;
+    let resultado = filaUrgencia(nombre);
 
-    if (tipo === "normal") {
-        nombres.push(nombre);
-    } else if (tipo === "urgencia") {
-        nombres.unshift(nombre);
-    }
+    result2.textContent = resultado;
+    input.value = "";
+    container.classList.remove("d-none");
+}
 
-    let listaHTML = "<ol>";
-    for (let i = 0; i < nombres.length; i++) {
-        listaHTML += `<li>${nombres[i]}</li>`;
-    }
-    listaHTML += "</ol>";
+function filaNormal(nombre) {
+    
+}
 
-    result.innerHTML = listaHTML;
+function filaEsperaNormal() {
+    const container = document.getElementById("resultado-container2");
+    const result2 = document.getElementById("result2");
+    const input = document.getElementById("input2");
+    let nombre = input.value;
+    let resultado = filaNormal(nombre);
 
+    result2.textContent = resultado;
     input.value = "";
     container.classList.remove("d-none");
 }
