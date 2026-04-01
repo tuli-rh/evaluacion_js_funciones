@@ -38,7 +38,7 @@ function filaUrgencia(nombre) {
     nombres.unshift(nombre);
     let contenido = "";
     for (let i = 0; i < nombres.length; i++) {
-        contenido += (i + 1) + ".- " + nombres[i] + " ";
+        contenido += (i + 1) + ".- " + nombres[i] + "<br>";
     }
     return contenido;
 }
@@ -49,7 +49,7 @@ function filaEsperaUrgencia() {
     let nombre = input.value;
     let resultado = filaUrgencia(nombre);
 
-    result2.textContent = resultado;
+    result2.innerHTML = resultado;
     input.value = "";
     container.classList.remove("d-none");
 }
@@ -58,7 +58,7 @@ function filaNormal(nombre) {
     nombres.push(nombre);
     let contenido = "";
     for (let i = 0; i < nombres.length; i++) {
-        contenido += (i + 1) + ".- " + nombres[i] + " ";
+        contenido += (i + 1) + ".- " + nombres[i] + "<br>";
     }
     return contenido;
 }
@@ -69,7 +69,7 @@ function filaEsperaNormal() {
     let nombre = input.value;
     let resultado = filaNormal(nombre);
 
-    result2.textContent = resultado;
+    result2.innerHTML = resultado;
     input.value = "";
     container.classList.remove("d-none");
 }
