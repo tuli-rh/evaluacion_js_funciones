@@ -1,5 +1,10 @@
 # evaluacion_js_funciones
 
+# Integrantes:
+Isidora Valenzuela
+Yulieth Gonzalez
+
+
 # 1. Módulo de Tesorería: Pago de Permisos (Cálculos y Retorno)
 En este ejercicio tenemos 2 funciones (function): 
 
