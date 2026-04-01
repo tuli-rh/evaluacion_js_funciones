@@ -33,9 +33,14 @@ Lógica: * Botón Normal: Agrega el nombre al final de la lista (push).
 Botón Urgencia: Agrega el nombre al inicio de la lista (unshift).
 Regla: El resultado debe mostrarse como una lista ordenada en el HTML. <ol>
 */
-
+let nombres = [];
 function filaUrgencia(nombre) {
-    
+    nombres.unshift(nombre);
+    let contenido = "";
+    for (let i = 0; i < nombres.length; i++) {
+        contenido += (i + 1) + ".- " + nombres[i] + " ";
+    }
+    return contenido;
 }
 function filaEsperaUrgencia() {
     const container = document.getElementById("resultado-container2");
@@ -50,9 +55,13 @@ function filaEsperaUrgencia() {
 }
 
 function filaNormal(nombre) {
-    
+    nombres.push(nombre);
+    let contenido = "";
+    for (let i = 0; i < nombres.length; i++) {
+        contenido += (i + 1) + ".- " + nombres[i] + " ";
+    }
+    return contenido;
 }
-
 function filaEsperaNormal() {
     const container = document.getElementById("resultado-container2");
     const result2 = document.getElementById("result2");

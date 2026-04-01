@@ -10,11 +10,15 @@ En este ejercicio tenemos 2 funciones (function):
     Esta es la función principal, en la que primero se reciben los valores del input ubicado en el archivo index, y tambien retorna un resultado, esta funcion esta conectada con la función montoPermiso(monto).
 
 # 2. Módulo de Salud: Fila de Vacunación (Arreglos y Prioridad)
-En este ejercicio tenemos 2 funciones (function): 
+En este ejercicio tenemos 4 funciones (function) y 2 botones: 
 
-1-. 
+1-. filaNormal(nombre):
 
-2-.
+2-.filaEsperaNormal():
+
+3-.filaUrgencia(nombre):
+
+4-.filaEsperaUrgencia():
 
 # 3. Módulo de Subsidios: Buscador de Beneficiarios (Ciclos e If)
 En este ejercicio tenemos 2 funciones (function): 
